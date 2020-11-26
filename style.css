@@ -12,6 +12,8 @@ h2 {
 
 ul {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 ul img {
