@@ -9,3 +9,11 @@ h1 {
 h2 {
   font-family: 'Source Code Pro', monospace;
 }
+
+ul {
+  list-style: none;
+}
+
+ul img {
+  width: 60px;
+}
