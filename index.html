@@ -9,57 +9,83 @@
     <title>Jason D. Allen</title>
 </head>
 <body>
-    <header>
-        <h2>Jason D. Allen</h2>
-    </header>
-    <main>
-        <!-- TODO: On hover use these headings to navigation points? -->
-        <h1>Hello</h1>
-        <h1>there.</h1>
-        <h1>I'm Jason.</h1>
-        <div>Probably put my face here</div>
-    </main>
-    <div>
-        <h2>Skills</h2>
-        <ul>
-            <li><img src="./images/html5.png" alt="HTML5"></li>
-            <li><img src="./images/css.png" alt="CSS"></li>
-            <li><img src="./images/js.png" alt="JavaScript"></li>
-            <li><img src="./images/react.png" alt="ReactJS"></li>
-            <li><img src="./images/typescript.png" alt="TypeScript"></li>
-            <li><img src="./images/nodejs.png" alt="NodeJS"></li>
-            <li><img src="./images/git.png" alt="Git"></li>
-        </ul>
-        <h2>Tools</h2>
-        <ul>
-            <li>Visual Studio Code</li>
-            <li>Github</li>
-            <li>Terminal</li>
-            <li>Chrome</li>
-            <li>Firefox</li>
-        </ul>
-    </div>
-    <div>
-        <h2>Projects</h2>
-        <ul>
-            <li>Animal Crossing (Live / Code)</li>
-            <li>Star Wars: Clone Wars (Live / Code)</li>
-            <li>Morse Code (Live / Code)</li>
-        </ul>
-    </div>
-    <div id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><img src="./images/twitter.png" alt="Twitter"></li>
-            <li><img src="./images/linkedIn.png" alt="LinkedIn"></li>
-            <li><img src="./images/github.png" alt="GitHub"></li>
-            <li><img src="./images/email.svg" alt="Email"></li>
-            <li><img src="./images/phone.svg" alt="Phone"></li>
-        </ul>
-    </div>
-    <footer>
-        <p>Jason made this.</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h2>Jason D. Allen</h2>
+        </header>
+        <nav>
+            <input type="radio" name="categories" id="hello-button">
+                <label for="hello-button">
+                    <a href="#hello">Hello</a>
+                </label>
+            <input type="radio" name="categories" id="skills-button">
+                <label for="skills-button">
+                    <a href="#skills">Skills</a>
+                </label>
+            <input type="radio" name="categories" id="tools-button">
+                <label for="tools-button">
+                    <a href="#tools">Tools</a>
+                </label>
+            <input type="radio" name="categories" id="projects-button">
+                <label for="projects-button">
+                    <a href="#projects">Projects</a>
+                </label>
+            <input type="radio" name="categories" id="contact-button">
+                <label for="contact-button">
+                    <a href="#contact">Contact</a>
+                </label>
+        </nav>
+        <main id="hello">
+            <!-- TODO: On hover use these headings to navigation points? -->
+            <h1>Hello</h1>
+            <h1>there.</h1>
+            <h1>I'm Jason.</h1>
+            <div>Probably put my face here</div>
+        </main>
+        <div id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><img src="./images/html5.png" alt="HTML5"></li>
+                <li><img src="./images/css.png" alt="CSS"></li>
+                <li><img src="./images/js.png" alt="JavaScript"></li>
+                <li><img src="./images/react.png" alt="ReactJS"></li>
+                <li><img src="./images/typescript.png" alt="TypeScript"></li>
+                <li><img src="./images/nodejs.png" alt="NodeJS"></li>
+                <li><img src="./images/git.png" alt="Git"></li>
+            </ul>
+        </div>
+        <div id="tools">
+            <h2>Preferred Tooling</h2>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Github</li>
+                <li>Terminal</li>
+                <li>Chrome</li>
+                <li>Firefox</li>
+            </ul>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Animal Crossing (Live / Code)</li>
+                <li>Star Wars: Clone Wars (Live / Code)</li>
+                <li>Morse Code (Live / Code)</li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><img src="./images/twitter.png" alt="Twitter"></li>
+                <li><img src="./images/linkedIn.png" alt="LinkedIn"></li>
+                <li><img src="./images/github.png" alt="GitHub"></li>
+                <li><img src="./images/email.svg" alt="Email"></li>
+                <li><img src="./images/phone.svg" alt="Phone"></li>
+            </ul>
+        </div>
+        <footer>
+            <p>Jason made this.</p>
+        </footer>
+</div>
     <script src="app.js"></script>
 </body>
 </html>
