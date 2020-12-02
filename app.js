@@ -12,7 +12,7 @@ handleKey = key => {
 }
 
 document.addEventListener('keydown', (e) => handleKey(e.code));
-panels[activeIndex].scrollIntoView();
+panels[0].scrollIntoView();
 
 
 console.log(`

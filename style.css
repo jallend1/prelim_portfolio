@@ -7,6 +7,9 @@ body {
 }
 
 nav {
+  position: fixed;
+  right: 20px;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -16,13 +19,13 @@ main {
   position: relative;
   height: 100vh;
   width: 100vw;
-  top: 0;
+  top: 10px;
   left: 0;
 }
 
 .panel {
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
 }
 
 h1 {
@@ -31,6 +34,7 @@ h1 {
 
 h2 {
   font-family: 'Source Code Pro', monospace;
+  margin: 0;
 }
 
 ul {
@@ -41,4 +45,24 @@ ul {
 
 ul img {
   width: 60px;
+}
+
+#hello {
+  background-color: yellow;
+}
+
+#skills {
+  background-color: purple;
+}
+
+#tools {
+  background-color: cyan;
+}
+
+#projects {
+  background-color: orange;
+}
+
+#contact {
+  background-color: green;
 }
