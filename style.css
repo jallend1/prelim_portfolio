@@ -1,22 +1,15 @@
 html {
-  font-family: "Telex", sans-serif;
+  font-family: 'Telex', sans-serif;
 }
 
 body {
   overflow: hidden;
 }
 
-.container {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 main {
@@ -25,43 +18,19 @@ main {
   width: 100vw;
   top: 0;
   left: 0;
-  transition: all 2s ease-in-out;
 }
 
 .panel {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  overflow: hidden;
-}
-
-#hello-button:checked ~ main {
-  transform: translateY(0%);
-}
-
-#skills-button:checked ~ main {
-  transform: translateY(-100%);
-}
-
-#tools-button:checked ~ main {
-  transform: translateY(-200%);
-}
-
-#project-button:checked ~ main {
-  transform: translateY(-300%);
-}
-
-#contact-button:checked ~ main {
-  transform: translateY(-400%);
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
 }
 
 h2 {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 ul {
