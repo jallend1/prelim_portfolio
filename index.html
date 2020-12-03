@@ -16,39 +16,17 @@
       <header>
         <h2>Jason D. Allen</h2>
       </header>
-      <nav>
-        <input type="radio" name="categories" id="hello-button" checked/>
-        <label for="hello-button">
-          <a href="#hello">Hello</a>
-        </label>
-        <input type="radio" name="categories" id="skills-button" />
-        <label for="skills-button">
-          <a href="#skills">Skills</a>
-        </label>
-        <input type="radio" name="categories" id="tools-button" />
-        <label for="tools-button">
-          <a href="#tools">Tools</a>
-        </label>
-        <input type="radio" name="categories" id="projects-button" />
-        <label for="projects-button">
-          <a href="#projects">Projects</a>
-        </label>
-        <input type="radio" name="categories" id="contact-button" />
-        <label for="contact-button">
-          <a href="#contact">Contact</a>
-        </label>
-      </nav>
+      <div class="main">
       <main>
         <div id="hello" class="panel">
           <!-- TODO: On hover use these headings to navigation points? -->
-          <h1>Hello</h1>
-          <h1>there.</h1>
+          <h1>Hello.</h1>
           <h1>I'm Jason.</h1>
           <div>Probably put my face here</div>
         </div>
         <div id="skills" class="panel">
           <h2>Skills</h2>
-          <ul>
+          <ul class="horizontal-list">
             <li><img src="./images/html5.png" alt="HTML5" /></li>
             <li><img src="./images/css.png" alt="CSS" /></li>
             <li><img src="./images/js.png" alt="JavaScript" /></li>
@@ -60,7 +38,7 @@
         </div>
         <div id="tools" class="panel">
           <h2>Preferred Tooling</h2>
-          <ul>
+          <ul class="horizontal-list">
             <li>
               <img src="./images/vscode.png" alt="Visual Studio Code Icon" />
             </li>
@@ -78,7 +56,7 @@
         </div>
         <div id="projects" class="panel">
           <h2>Projects</h2>
-          <ul>
+          <ul class="horizontal-list">
             <li>Animal Crossing (Live / Code)</li>
             <li>Star Wars: Clone Wars (Live / Code)</li>
             <li>Morse Code (Live / Code)</li>
@@ -88,7 +66,7 @@
         </div>
         <div id="contact" class="panel">
           <h2>Contact</h2>
-          <ul>
+          <ul class="horizontal-list">
             <li><img src="./images/twitter.png" alt="Twitter" /></li>
             <li><img src="./images/linkedIn.png" alt="LinkedIn" /></li>
             <li><img src="./images/octocat.png" alt="GitHub" /></li>
@@ -97,6 +75,18 @@
           </ul>
         </div>
       </main>
+      <nav>
+        <ul class="vertical">
+          <li>Hello there</li>
+          <li>Skills</li>
+          <li>Tools</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>  
+      </nav>
+    </div>
+    <footer>Hello
+    </footer>
     </div>
     <script src="app.js"></script>
   </body>
