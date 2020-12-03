@@ -9,7 +9,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr 30px;
@@ -27,7 +27,7 @@ nav {
 
 .main {
   display: grid;
-  grid-template-columns: 3fr 15%;
+  grid-template-columns: 3fr auto;
   overflow: hidden;
 }
 
