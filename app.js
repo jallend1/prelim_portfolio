@@ -1,20 +1,27 @@
 const panels = document.querySelectorAll('.panel');
 const nav = document.querySelector('#nav-ul');
+const navItems = document.querySelectorAll('nav ul li');
+console.log(nav);
 
 let activeIndex = 0;
+let prevIndex = null;
 let previousScrollTime = null;
 
 const handleKey = key => {
   if(key === 'ArrowDown'){
+    prevIndex = activeIndex;
     activeIndex < panels.length - 1 ? activeIndex++ : activeIndex = 0;
   }
   if(key === 'ArrowUp'){
+    prevIndex = activeIndex;
     activeIndex !== 0 ? activeIndex-- : activeIndex = panels.length - 1;
   }
   jumpToSpot();
 }
 
 const jumpToSpot = () => {
+  navItems[activeIndex].classList.add('active');
+  if(prevIndex !== null) navItems[prevIndex].classList.remove('active');
   panels[activeIndex].scrollIntoView({behavior: 'smooth'});
 }
 
@@ -22,6 +29,7 @@ const jumpToSpot = () => {
 // handleKey and MouseWheelScroll should be integrated once the flaw in scrolling is resolved
 const mouseWheelScroll = (e) => {
   if(!previousScrollTime || Date.now() - previousScrollTime > 200){
+    prevIndex = activeIndex;
     if(e.deltaY > 0){
       activeIndex < panels.length - 1 ? activeIndex++ : activeIndex = 0;
     }

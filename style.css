@@ -69,6 +69,11 @@ nav ul {
   margin: 0;
 }
 
+.active {
+  background-color: blue;
+  color: purple;
+}
+
 ul img {
   width: 60px;
 }
