@@ -8,12 +8,19 @@ body {
 }
 
 .container {
-  box-sizing: border-box;
   height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr 30px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr auto;
+  overflow: hidden;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 nav {
@@ -24,12 +31,8 @@ nav {
   justify-content: space-between;
   flex-direction: column;
   background-color: red;
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 3fr auto;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .panel {
@@ -57,7 +60,13 @@ h2 {
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0 10px;
+  margin: 0;
 }
 
 ul img {
