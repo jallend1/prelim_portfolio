@@ -1,11 +1,10 @@
 const panels = document.querySelectorAll('.panel');
-const nav = document.querySelector('#nav-ul');
-const navItems = document.querySelectorAll('nav ul li');
-console.log(nav);
+const nav = document.querySelector('#nav-ul');                // Navbar itself for click event listener
+const navItems = document.querySelectorAll('nav ul li');      // Headings in the Navbar
 
-let activeIndex = 0;
-let prevIndex = null;
-let previousScrollTime = null;
+let activeIndex = 0;                                          // Index of active panel
+let prevIndex = null;                                         // Index of panel just moved from
+let previousScrollTime = null;                                // Time of previous scroll to keep things from getting wild
 
 const handleKey = key => {
   if(key === 'ArrowDown'){
@@ -55,7 +54,6 @@ const navClick = (e) => {
 document.addEventListener('keydown', (e) => handleKey(e.code));
 window.addEventListener('wheel', mouseWheelScroll);
 nav.addEventListener('click', navClick);
-
 
 jumpToSpot();
 
