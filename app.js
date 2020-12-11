@@ -21,7 +21,7 @@ const handleKey = key => {
 const jumpToSpot = () => {
   navItems[activeIndex].classList.add('active');
   if(prevIndex !== null) navItems[prevIndex].classList.remove('active');
-  panels[activeIndex].scrollIntoView({behavior: 'smooth'});
+  panels[activeIndex].scrollIntoView(true);
 }
 
 // This function is _not_ lining up properly at this time
