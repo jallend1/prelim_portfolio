@@ -21,12 +21,13 @@ const handleKey = key => {
 const jumpToSpot = () => {
   navItems[activeIndex].classList.add('active');
   if(prevIndex !== null) navItems[prevIndex].classList.remove('active');
-  panels[activeIndex].scrollIntoView(true);
+  panels[activeIndex].scrollIntoView({behavior: 'smooth'})
 }
 
 // This function is _not_ lining up properly at this time
 // handleKey and MouseWheelScroll should be integrated once the flaw in scrolling is resolved
 const mouseWheelScroll = (e) => {
+  e.preventDefault();
   if(!previousScrollTime || Date.now() - previousScrollTime > 200){
     prevIndex = activeIndex;
     if(e.deltaY > 0){
@@ -52,7 +53,7 @@ const navClick = (e) => {
 }
 
 document.addEventListener('keydown', (e) => handleKey(e.code));
-window.addEventListener('wheel', mouseWheelScroll);
+window.addEventListener('wheel', mouseWheelScroll, {passive: false});
 nav.addEventListener('click', navClick);
 
 jumpToSpot();
