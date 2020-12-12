@@ -3,7 +3,7 @@ const nav = document.querySelector('#nav-ul');                // Navbar itself f
 const navItems = document.querySelectorAll('nav ul li');      // Headings in the Navbar
 
 let activeIndex = 0;                                          // Index of active panel
-let prevIndex = null;                                         // Index of panel just moved from
+let prevIndex = null;                                         // Index of panel just moved from (for styling application)
 let previousScrollTime = null;                                // Time of previous scroll to keep things from getting wild
 
 const handleKey = key => {
@@ -51,6 +51,7 @@ const changePanel = (direction) => {
 const navClick = (e) => {
   // Extracts text from clicked nav element
   const destinationID = e.target.textContent.toLowerCase();
+  navItems.forEach(navItem => navItem.classList.remove('active'));
   panels.forEach((panel, index) => {
     if(panel.id === destinationID){
       activeIndex = index;
