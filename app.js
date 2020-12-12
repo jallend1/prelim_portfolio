@@ -9,11 +9,11 @@ let previousScrollTime = null;                                // Time of previou
 const handleKey = key => {
   if(key === 'ArrowDown'){
     prevIndex = activeIndex;
-    activeIndex < panels.length - 1 ? activeIndex++ : activeIndex = 0;
+    changePanel('down');
   }
   if(key === 'ArrowUp'){
     prevIndex = activeIndex;
-    activeIndex !== 0 ? activeIndex-- : activeIndex = panels.length - 1;
+    changePanel('up');
   }
   jumpToSpot();
 }
@@ -24,21 +24,28 @@ const jumpToSpot = () => {
   panels[activeIndex].scrollIntoView({behavior: 'smooth'})
 }
 
-// This function is _not_ lining up properly at this time
-// handleKey and MouseWheelScroll should be integrated once the flaw in scrolling is resolved
 const mouseWheelScroll = (e) => {
   e.preventDefault();
   if(!previousScrollTime || Date.now() - previousScrollTime > 200){
     prevIndex = activeIndex;
     if(e.deltaY > 0){
-      activeIndex < panels.length - 1 ? activeIndex++ : activeIndex = 0;
+      changePanel('down');
     }
     else if(e.deltaY < 0){
-      activeIndex !== 0 ? activeIndex-- : activeIndex = panels.length - 1;
+      changePanel('up');
     }
     previousScrollTime = Date.now();
   }
   jumpToSpot();
+}
+
+const changePanel = (direction) => {
+  if(direction === 'down'){
+    activeIndex < panels.length - 1 ? activeIndex++ : activeIndex = 0;
+  }
+  else{
+    activeIndex !== 0 ? activeIndex-- : activeIndex = panels.length - 1;
+  }
 }
 
 const navClick = (e) => {
