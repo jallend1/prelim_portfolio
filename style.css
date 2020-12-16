@@ -1,5 +1,5 @@
 html {
-  font-family: 'Telex', sans-serif;
+  font-family: "Telex", sans-serif;
 }
 
 body {
@@ -52,7 +52,7 @@ blockquote {
 }
 
 h1 {
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: "Archivo Narrow", sans-serif;
   margin: 0;
   font-size: 6em;
 }
@@ -62,7 +62,7 @@ h1 span {
 }
 
 h2 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   margin: 0;
 }
 
