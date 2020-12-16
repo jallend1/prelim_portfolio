@@ -19,6 +19,7 @@ header,
 footer {
   background-color: #637373;
   color: white;
+  text-align: right;
 }
 
 .main {
@@ -27,6 +28,7 @@ footer {
   overflow: hidden;
   width: 100vw;
   box-sizing: border-box;
+  background-color: #ffeadb;
 }
 
 nav {
@@ -36,12 +38,12 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #637373;
   margin: 0;
   padding: 0;
 }
 
 .panel {
+  align-items: center;
   height: 100vh;
 }
 
@@ -104,7 +106,6 @@ ul img {
 }
 
 #hello {
-  background-color: #ffeadb;
   display: flex;
   justify-content: flex-start;
 }
@@ -120,22 +121,6 @@ ul img {
 
 #profile img {
   max-width: 90%;
-}
-
-#skills {
-  background-color: #ff4646;
-}
-
-#tools {
-  background-color: cyan;
-}
-
-#projects {
-  background-color: orange;
-}
-
-#contact {
-  background-color: green;
 }
 
 footer img {
