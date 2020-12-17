@@ -1,5 +1,5 @@
 html {
-  font-family: "Telex", sans-serif;
+  font-family: 'Telex', sans-serif;
 }
 
 body {
@@ -33,7 +33,7 @@ footer {
 
 nav {
   position: sticky;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 90px);
   top: 0px;
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,7 @@ nav {
 
 .panel {
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 90px);
 }
 
 blockquote {
@@ -52,7 +52,7 @@ blockquote {
 }
 
 h1 {
-  font-family: "Archivo Narrow", sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   margin: 0;
   font-size: 6em;
 }
@@ -62,11 +62,23 @@ h1 span {
 }
 
 h2 {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   margin: 0;
 }
 
 .horizontal-list {
+  margin: auto;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1.25em 2em;
+  list-style: none;
+  justify-items: center;
+  justify-content: center;
+}
+
+.footer-nav {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -114,16 +126,14 @@ ul img {
   min-width: 40%;
 }
 
-#profile p {
-  max-width: 90%;
+#profile {
   text-align: center;
 }
 
 #profile img {
-  max-width: 90%;
+  max-width: 600px;
 }
 
 footer img {
   max-width: 30%;
-  height: auto;
 }
