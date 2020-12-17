@@ -118,8 +118,8 @@ ul img {
 }
 
 #hello {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
 }
 
 #greeting {
@@ -131,7 +131,7 @@ ul img {
 }
 
 #profile img {
-  max-width: 600px;
+  max-width: 80%;
 }
 
 footer img {
